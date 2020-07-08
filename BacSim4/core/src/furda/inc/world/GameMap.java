@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import furda.inc.entities.Entity;
 import furda.inc.entities.Player;
+import furda.inc.entities.Spore;
 //import furda.inc.entities.bacteriaBlue;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public abstract class GameMap {
         entities = new ArrayList<Entity>();
         entities.add(new Player(40,200,this));
         entities.add(new Player(100,200,this));
+        entities.add(new Spore(200, 200, this));
         //entities.add(new bacteriaBlue(60, 300, this));
     }
 
@@ -28,7 +30,8 @@ public abstract class GameMap {
     }
     public void update (float delta){
         for(Entity entity : entities){
-            entity.update(delta, -9.8f);
+            //entity.update(delta, -9.8f);
+            entity.update(delta, 0);
         }
 
     }

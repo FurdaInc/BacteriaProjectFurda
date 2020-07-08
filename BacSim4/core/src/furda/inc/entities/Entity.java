@@ -46,6 +46,13 @@ public abstract class Entity {
             this.pos.x = newX;
     }
 
+    protected void moveY(float amount){
+        float newY = this.pos.y + amount;
+        //Below checks if they can move where they are trying to move.
+        if(!map.doesRectCollideWithMap(pos.x, newY, getWidth(), getHeight()))
+            this.pos.y = newY;
+    }
+
     public Vector2 getPos() {
         return pos;
     }

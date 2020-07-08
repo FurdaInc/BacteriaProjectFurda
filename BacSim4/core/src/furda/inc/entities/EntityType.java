@@ -7,7 +7,8 @@ public enum EntityType {
     //Height - player is 2 bricks high
     //The weight is going to be an assigned value for gravity. This affects fall speed
 
-    PLAYER("player", 56, 64, 40);
+    PLAYER("player", 56, 64, 40),
+    SPORE("spore", 16,16,40);
 
 
     private String id;

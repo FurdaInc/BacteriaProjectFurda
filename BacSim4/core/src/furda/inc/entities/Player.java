@@ -13,6 +13,8 @@ public class Player extends Entity {
     private static final int SPEED = 80;
     private static final int JUMP_VELOCITY = 1;
 
+    private static int COLOR = 0;
+
     public static  final float ANIMATION_SPEED = 0.5f;
     Animation[] rolls;
     int roll;
@@ -22,12 +24,19 @@ public class Player extends Entity {
     Texture image;
 
     public Player(float x, float y, GameMap map) {
+
         super(x, y, EntityType.PLAYER, map);
         //Intializes the picture of the player
         roll = 1;
         rolls = new Animation[3];
-        TextureRegion[][] rollSpriteSheet = TextureRegion.split(new Texture("Bacteria.png"),201,130);
-        rolls[roll] =  new Animation(ANIMATION_SPEED, rollSpriteSheet[0]);
+        if (COLOR == 0) {
+            TextureRegion[][] rollSpriteSheet = TextureRegion.split(new Texture("Bacteria.png"), 201, 130);
+            rolls[roll] = new Animation(ANIMATION_SPEED, rollSpriteSheet[0]);
+            COLOR +=1;
+        }else{
+            TextureRegion[][] rollSpriteSheet = TextureRegion.split(new Texture("BacteriaRed.png"), 201, 130);
+            rolls[roll] = new Animation(ANIMATION_SPEED, rollSpriteSheet[0]);
+        }
         //image = new Texture("Karsa.jpg");
     }
 
@@ -48,6 +57,12 @@ public class Player extends Entity {
 
         if(Gdx.input.isKeyPressed(Keys.RIGHT))
             moveX(SPEED * deltaTime);
+
+        if(Gdx.input.isKeyPressed(Keys.UP))
+            moveY(SPEED * deltaTime);
+
+        if(Gdx.input.isKeyPressed(Keys.DOWN))
+            moveY(-SPEED * deltaTime);
     }
 
     @Override
