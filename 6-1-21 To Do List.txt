@@ -1,0 +1,56 @@
+To Do List
+
+- IBSim
+
+- Remove all the dumb PrintF Statements - Sam
+
+- remake the Jar - Sam
+
+- NF - Fix the Jank stupid shit in Bacteria Final Form - Jake
+
+- NF - Make the particles move faster but in smaller increments (less jitter) - Jake
+
+- Go through and sort asset folder - Sam (1st pass) - Jake
+
+- Fix move to Final Position - Jake
+
+- Resize the window of application - Bryce (Sam will also research)
+	- make the map and the frame same size?
+	- make it way too big
+	- always have it in the centre
+
+- New Tiled Game Map - Bryce
+	- so the frame and map are the same (sam demonstrated)
+	
+- We need a giant tube map - Bryce
+
+- Standardise whether 5 or 7 frames for the bacteria animation? (make it 5 (one  animation) - Bryce
+
+- Aesthetics of buttons? (make the buttons so the naming can be changed) - Bryce
+	- Good for now, to check with Cheryl for feedback 
+
+- Need animation for Red Spore - Bryce
+	- up is fine
+	- is done just needs to be on git
+
+- Need Animation for White Blood Cell - Bryce
+	- needs to be same size as bacteria.
+	- needs left and right animation.
+	- NF - up and down
+
+
+
+After Talk with Cheryl - Bacteria final attaches to wall - (SUPER MAP DEPENDENT)
+
+- NF - Bacteria drift after attaching all 4 spores
+	- as part of this , Bacteria will spawn further apart so that the drift is more obvious
+
+- NF - longer animations for specific bacterial interactions between each other or other things 
+	- expectation but 20+?
+
+- NF - We need Bacteria image to be split into quarters - (NF - Future thing for Bryce)
+
+- NF - we need a smoother movement into receptors, figure out coordinates of prongs and have it move into prong. (NF - Future thing for Bryce)
+
+- NF NF NF - Runescape sound effects because we are bad (tink sound)
+
